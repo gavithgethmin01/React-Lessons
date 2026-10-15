@@ -1,3 +1,5 @@
+import NavigationItems from "./NavigationItems.jsx";
+
 const Navbar = () => {
   return (
     <div className="w-screen min-w-screen flex justify-between">
@@ -5,9 +7,9 @@ const Navbar = () => {
         <span>LOGO</span>
       </div>
       <ul className="flex text-pink-200 font-bold">
-        <li className="p-[10px]">Home</li>
-        <li className="p-[10px]">Contact</li>
-        <li className="p-[10px]">Gallery</li>
+        <NavigationItems name="Home"></NavigationItems>
+        <NavigationItems name="Contact"></NavigationItems>
+        <NavigationItems name="Gallery"></NavigationItems>
       </ul>
       <div className="p-[10px]">
         <span className="text-orange-300 font-bold">Sing In</span>
