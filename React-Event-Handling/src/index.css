@@ -1,1 +1,12 @@
+/* 1. Import Poppins from Google Fonts at the very top */
+@import url("https://googleapis.com");
+
 @import "tailwindcss";
+
+@theme {
+  /* Option A: Make Poppins the default sans font for the whole app */
+  --font-sans: "Poppins", sans-serif;
+
+  /* Option B: Create a specific utility class like font-poppins */
+  --font-poppins: "Poppins", sans-serif;
+}
