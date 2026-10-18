@@ -1,7 +1,12 @@
+import { useState } from "react";
+
 const App = () => {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="text-orange-400 bg-green-100 text-9xl font-extrabold">
-      Hello Friend!
+    <div>
+      <h1>Current Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increase Count</button>
     </div>
   );
 };
