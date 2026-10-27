@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import FetchData from "./FetchData.jsx";
 
 const UserProfile = () => {
   const [user, setUser] = useState(null);
@@ -24,17 +25,15 @@ const UserProfile = () => {
     fetchUserData();
   }, []);
 
-  // 1. Loading state එක check කිරීම
   if (loading) return <p>Loading...</p>;
-
-  // 2. Data ලැබුණේ නැත්නම් හෝ error එකක් ආවා නම් පෙන්වන කොටස
   if (!user) return <p>No user data found!</p>;
 
   return (
-    <div>
-      <h2>{user.name}</h2>
-      <p>{user.email}</p>
-    </div>
+    // <div>
+    //<h2>{user.name}</h2>
+    // <p>{user.email}</p>
+    <FetchData />
+    //</div>
   );
 };
 
